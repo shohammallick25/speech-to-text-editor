@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="header">
+            <h1 class="title">Speech to Text</h1>
+            <h4 class="info">Click on mic button to start. Make sure to grant microphone permission</h4>
+        </div>
+        <div class="container">
+            <div class="text">
+            </div>
+            <div class="toolbar">
+                <div class="other-buttons">
+                    <button class="btn clear-everything">Clear</button>
+                    <button class="btn copy-text">Copy</button>
+                </div>
+                <div class="mic">
+                    <button class="btn mic-btn"></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a target="_blank" href="https://github.com/sohail-js/speech-to-text-js">Source Code</a>
+            <a target="_blank" href="https://youtu.be/WpJl-F4MGAY">Tutorial</a>
+            
+            <span>
+                By <a target="_blank" href="https://linktr.ee/javascriptwithsohail">JavaScript With Sohail</a>
+            </span>
+        </div>
+    </div>
+
+    <!-- <div class="alert">Copied to clipboard!</div> -->
+
+    <script src="./app.js" type="module"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDLZgbqF3hG7Xij2rItSm96Tc4fbjjPeRA",
+          authDomain: "speech-to-text-js.firebaseapp.com",
+          projectId: "speech-to-text-js",
+          storageBucket: "speech-to-text-js.appspot.com",
+          messagingSenderId: "758714826957",
+          appId: "1:758714826957:web:ae55648e7cd80e01e1a984",
+          measurementId: "G-HVWRNVWGQG"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>
