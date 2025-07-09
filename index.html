@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speech to Text</title>
 
+    <link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#007bff">
+
     <link rel="icon" href="lo.png" type="image/png"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -67,5 +70,14 @@
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
       </script>
+
+    <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(reg => console.log("Service Worker Registered", reg))
+      .catch(err => console.error("Service Worker Failed", err));
+  }
+    </script>
+    
 </body>
 </html>
